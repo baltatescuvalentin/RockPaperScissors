@@ -1,0 +1,75 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Press+Start+2P&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #09083a;
+    height: 100vh;
+}
+
+.header, .footer {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #060524;
+}
+
+.page_title {
+    font-family: 'Press Start 2P', cursive;
+    color: #fac650;
+    font-size: 20px;
+    padding: 20px 0;
+}
+
+.footer_content {
+    font-family: 'Press Start 2P', cursive;
+    color: #fac650;
+    font-size: 10px;
+    padding: 10px 0;
+}
+
+.fa-github {
+    font-size: 20px;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.score_info, .score_message {
+    text-align: center;
+    color: rgb(220, 229, 236);
+    font-family: 'Mouse Memoirs';
+    font-size: 24px;
+}
+
+.current {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    color: rgb(220, 229, 236);
+    font-family: 'Mouse Memoirs';
+}
+
+.current_choice {
+    padding: 8px 36px;
+}
+
+.sign {
+    font-size: 80px;
+}
+
+.current_score {
+    font-size: 20px;
+}
+
+.sign.btn {
+    background-color: #393e46;
+    padding: 16px;
+    border-radius: 8px;
+    margin: 16px 24px;
+}

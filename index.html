@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rock Paper Scissors</title>
+        <link rel="stylesheet" href="./style.css">
+        <script src="./script.js" defer></script>
+        <script src="https://kit.fontawesome.com/3ef20e5b59.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="header">
+            <h1 class="page_title">Rock Paper Scissors</h1>
+        </div>
+        <div class="game">
+            <div class="scoreboard">
+                <h3 class="score_info" id="who_won">
+                    Choose your weapon!
+                </h3>
+                <p class="score_message" id="how_won">
+                    First to 5 points wins the game!
+                </p>
+            </div>
+
+            <div class="current">
+                <div class="current_choice">
+                    <div class="sign" id="playerSign">❔</div>
+                    <p class="current_score" id="playerScore">Player: 0</p>
+                </div>
+                
+                <div class="current_choice">
+                    <div class="sign" id="computerSign">❔</div>
+                    <p class="current_score" id="computerScore">Computer: 0</p>
+                </div>
+                
+            </div>
+
+            <div class="choices">
+                <button class="sign btn" id="rockBtn">
+                    ✊
+                </button>
+
+                <button class="sign btn" id="paperBtn">
+                    ✋
+                </button>
+
+                <button class="sign btn" id="scissorsBtn">
+                    ✌
+                </button>
+            </div>
+            
+        </div>
+        <div class="footer">
+            <h3 class="footer_content">Copyright © baltatescuvalentin 
+                <script>
+                    document.write(new Date().getFullYear())
+                </script>
+                <a href="https://github.com/baltatescuvalentin" target="_blank">
+                    <i class="fa-brands fa-github" ></i>
+                </a>
+            </h3>
+            
+        </div>
+    </body>
+</html>
