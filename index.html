@@ -10,10 +10,16 @@
         <script src="https://kit.fontawesome.com/3ef20e5b59.js" crossorigin="anonymous"></script>
     </head>
     <body>
+    
         <div class="header">
             <h1 class="page_title">Rock Paper Scissors</h1>
         </div>
-        <div class="game">
+        <div class="alertbox" id="alertbox">
+            <p class="alert_message" id="alert_message">Congrats! You won!</p>
+            <button class="alertbox_btn" id="alertbox_playagain">Play again!</button>
+        </div>
+        <div class="game" id="game">
+            
             <div class="scoreboard">
                 <h3 class="score_info" id="who_won">
                     Choose your weapon!
@@ -51,7 +57,7 @@
             </div>
             
         </div>
-        <div class="footer">
+        <footer>
             <h3 class="footer_content">Copyright © baltatescuvalentin 
                 <script>
                     document.write(new Date().getFullYear())
@@ -60,7 +66,7 @@
                     <i class="fa-brands fa-github" ></i>
                 </a>
             </h3>
-        </div>
+        </footer>
         <script src="./script.js"></script>
     </body>
 </html>

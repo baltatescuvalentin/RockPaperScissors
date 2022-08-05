@@ -4,14 +4,18 @@ let cScore = 0;
 const emoji = ['✊', '✋', '✌', '❔'];
 let computerEmoji;
 
-var buttons = document.getElementsByTagName("button");
+var buttons = document.querySelectorAll("button.sign.btn");
 const whoWon = document.querySelector('#who_won');
 const howWon = document.querySelector('#how_won');
 const playerSign = document.querySelector('#playerSign');
 const computerSign = document.querySelector('#computerSign');
 const playerScore = document.querySelector('#playerScore');
 const computerScore = document.querySelector('#computerScore');
-
+var alertBox = document.getElementById('alertbox');
+var gameContainer = document.getElementById('game');
+var playAgain = document.getElementById('alertbox');
+const messageAlertBox = document.querySelector('#alert_message');
+var playAgainBtn = document.querySelector('#alertbox_playagain');
 
 function getComputerChoice() {
     let random = Math.floor((Math.random()*3) + 1);
@@ -113,17 +117,27 @@ function game(e) {
     computerSign.textContent = computerEmoji;
     playerScore.textContent = `Player: ${pScore}`;
     computerScore.textContent = `Computer: ${cScore}`;
-
     console.log("Player: " + pScore + " and Computer: " + cScore);
-        
     if(pScore == 5) {
-        alert("Congratulations! You won the game!");
-        reset();
+        playAgain.style.visibility = "visible";
+        gameContainer.style.opacity = 0.3;
+        messageAlertBox.textContent = "Congratulations! You won the game!";
+        // alert("Congratulations! You won the game!");
+        // reset();
     }
     else if(cScore == 5){
-        alert("Oh no! You lost the game!");
-        reset();
+        playAgain.style.visibility = "visible";
+        gameContainer.style.opacity = 0.3;
+        messageAlertBox.textContent = "Oh no! You lost the game!!";
+        // alert("Oh no! You lost the game!");
+        // reset();
     }
+}
+
+function pressPlayAgain() {
+    playAgain.style.visibility = "hidden";
+    gameContainer.style.opacity = 1;
+    reset();
 }
 
 
@@ -145,3 +159,5 @@ for (var i = 0; i < buttonsCount; i += 1) {
         game(this)
     };
 }
+
+playAgainBtn.addEventListener('click', pressPlayAgain);
