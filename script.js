@@ -121,6 +121,7 @@ function game(e) {
     if(pScore == 5) {
         playAgain.style.visibility = "visible";
         gameContainer.style.opacity = 0.3;
+        gameContainer.style.pointerEvents = 'none';
         messageAlertBox.textContent = "Congratulations! You won the game!";
         // alert("Congratulations! You won the game!");
         // reset();
@@ -128,6 +129,7 @@ function game(e) {
     else if(cScore == 5){
         playAgain.style.visibility = "visible";
         gameContainer.style.opacity = 0.3;
+        gameContainer.style.pointerEvents = 'none'
         messageAlertBox.textContent = "Oh no! You lost the game!!";
         // alert("Oh no! You lost the game!");
         // reset();
@@ -137,6 +139,7 @@ function game(e) {
 function pressPlayAgain() {
     playAgain.style.visibility = "hidden";
     gameContainer.style.opacity = 1;
+    gameContainer.style.pointerEvents = 'auto';
     reset();
 }
 
